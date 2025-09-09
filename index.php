@@ -1,3 +1,9 @@
+<?php
+session_start(); // เริ่ม session
+
+// สมมติว่า login.php เก็บชื่อผู้ใช้ไว้ใน $_SESSION['username']
+$username = isset($_SESSION['username']) ? $_SESSION['username'] : null;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,6 +36,20 @@
             box-shadow: 0 0 0 .25rem rgba(33, 37, 41, .15);
             /* วงเงาอ่อนๆ */
         }
+
+        .hover-underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: currentColor; /* ใช้สีตามข้อความ */
+  transition: width 0.3s ease;
+}
+.hover-underline:hover::after {
+  width: 100%;
+}
     </style>
 
 </head>
@@ -38,14 +58,14 @@
     <nav class="navbar navbar-expand-lg bg-light py-3 border-bottom bordor-dark">
         <div class="container-fluid">
 
-            <a href="Home.php" class="navbar-brand fs-2 fw-bolder text-uppercase mx-3">JS</a>
+            <a href="index.php" class="navbar-brand fs-2 fw-bolder text-uppercase mx-3">JS</a>
 
             <ul class="navbar-nav px-1">
                 <li class="navbar-item"><a href="Club.php"
-                        class="nav-link fs-5 fw-bolder text-uppercase mx-3">ClubShirt</a>
+                        class="nav-link hover-underline position-relative d-inline-block fs-5 fw-bolder text-uppercase mx-3">ClubShirt</a>
                 </li>
                 <li class="navbar-item"><a href="National.php"
-                        class="nav-link fs-5 fw-bolder text-uppercase">Nationalteamshirt</a>
+                        class="nav-link hover-underline position-relative d-inline-block fs-5 fw-bolder text-uppercase">Nationalteamshirt</a>
                 </li>
             </ul>
 
@@ -58,9 +78,16 @@
             </div>
 
             <div class="d-flex align-items-center">
-                <a href="account.php" class="me-2">
-                    <i class="bi bi-person-fill fs-3 text-dark"></i>
-                </a>
+                <?php if ($username): ?>
+                    <a href="account.php" class="me-2 nav-link">
+                        <i class="bi bi-person-fill fs-3 text-dark"></i>
+                        <span class="fw-bold"><?php echo htmlspecialchars($username); ?></span>
+                    </a>
+                <?php else: ?>
+                    <a href="login.php" class="me-2">
+                        <i class="bi bi-person-fill fs-3 text-dark"></i>
+                    </a>
+                <?php endif; ?>
                 <a href="">
                     <i class="bi bi-bag fs-3 text-dark"></i>
                 </a>

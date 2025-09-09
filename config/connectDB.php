@@ -1,12 +1,12 @@
 <?php
-    $host = "localhost";
-    $db = "s6614421004";
-    $usr = "root";
-    $pwd = "";
-    $port = "3306";
-    $conn = mysqli_connect($host,$usr,$pwd,$db,$port);
-    if (!$conn) {
-        die('Could not connect to MySQL: ' . mysqli_connect_error());
-    }
-    mysqli_query($conn, 'SET NAMES \'utf8\'');
+$servername = "localhost";
+$username = "root";  // ค่าเริ่มต้น XAMPP
+$password = "";      // ค่าเริ่มต้น XAMPP
+$dbname = "s6614421004"; // ชื่อ Database ของคุณ (เปลี่ยนตามจริง)
+
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
 ?>

@@ -1,3 +1,13 @@
+<?php
+session_start(); // เริ่ม session
+
+// สมมติว่า login.php เก็บชื่อผู้ใช้ไว้ใน $_SESSION['username']
+$username = isset($_SESSION['username']) ? $_SESSION['username'] : null;
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+</html>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,37 +22,37 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-  <style>
-        body {
-            font-family: 'Roboto Slab', serif;
-        }
+<style>
+    body {
+        font-family: 'Roboto Slab', serif;
+    }
 
-        /* เพิ่มกรอบเมื่อเอาเมาส์ชี้ */
-        .hover-border {
-            display: block;
-            border: 1px solid transparent;
-            transition: border-color .2s, box-shadow .2s;
-        }
+    /* เพิ่มกรอบเมื่อเอาเมาส์ชี้ */
+    .hover-border {
+        display: block;
+        border: 1px solid transparent;
+        transition: border-color .2s, box-shadow .2s;
+    }
 
-        .hover-border:hover {
-            border-color: #212529;
-            /* สีกรอบ = text-dark ของ Bootstrap */
-            box-shadow: 0 0 0 .25rem rgba(33, 37, 41, .15);
-            /* วงเงาอ่อนๆ */
-        }
-    </style>
+    .hover-border:hover {
+        border-color: #212529;
+        /* สีกรอบ = text-dark ของ Bootstrap */
+        box-shadow: 0 0 0 .25rem rgba(33, 37, 41, .15);
+        /* วงเงาอ่อนๆ */
+    }
+</style>
 
 <body>
     <nav class="navbar navbar-expand-lg bg-light py-3 border-bottom bordor-dark">
         <div class="container-fluid">
 
-            <a href="Home.html" class="navbar-brand fs-2 fw-bolder text-uppercase mx-3">JS</a>
+            <a href="index.php" class="navbar-brand fs-2 fw-bolder text-uppercase mx-3">JS</a>
 
             <ul class="navbar-nav px-1">
-                <li class="navbar-item"><a href="Club.html"
+                <li class="navbar-item"><a href="Club.php"
                         class="nav-link fs-5 fw-bolder text-uppercase mx-3">ClubShirt</a>
                 </li>
-                <li class="navbar-item"><a href="National.html"
+                <li class="navbar-item"><a href="National.php"
                         class="nav-link fs-5 fw-bolder text-uppercase">Nationalteamshirt</a>
                 </li>
             </ul>
@@ -55,9 +65,16 @@
                 </form>
             </div>
             <div class="d-flex align-items-center">
-                <a href="" class="me-2">
-                    <i class="bi bi-person-fill fs-3 text-dark"></i>
-                </a>
+                <?php if ($username): ?>
+                    <a href="account.php" class="me-2 nav-link">
+                        <i class="bi bi-person-fill fs-3 text-dark"></i>
+                        <span class="fw-bold"><?php echo htmlspecialchars($username); ?></span>
+                    </a>
+                <?php else: ?>
+                    <a href="login.php" class="me-2">
+                        <i class="bi bi-person-fill fs-3 text-dark"></i>
+                    </a>
+                <?php endif; ?>
                 <a href="">
                     <i class="bi bi-bag fs-3 text-dark"></i>
                 </a>
