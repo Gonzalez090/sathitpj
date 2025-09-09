@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Roboto Slab', serif;
+    }
+  </style>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light py-3 border-bottom bordor-dark">
+        <div class="container-fluid">
+
+            <a href="Home.html" class="navbar-brand fs-2 fw-bolder text-uppercase mx-3">JS</a>
+
+            <ul class="navbar-nav px-1">
+                <li class="navbar-item"><a href="Club.html"
+                        class="nav-link fs-5 fw-bolder text-uppercase mx-3">ClubShirt</a>
+                </li>
+                <li class="navbar-item"><a href="National.html"
+                        class="nav-link fs-5 fw-bolder text-uppercase">Nationalteamshirt</a>
+                </li>
+            </ul>
+
+            <div class="search">
+                <form class="d-flex mx-3" role="search" onsubmit="return false;">
+                    <input id="searchBox" class="form-control me-2" type="search" placeholder="Search"
+                        aria-label="Search">
+                    <button class="btn btn-outline-dark" type="button" onclick="searchItems()">Search</button>
+                </form>
+            </div>
+            <div class="d-flex align-items-center">
+                <a href="" class="me-2">
+                    <i class="bi bi-person-fill fs-3 text-dark"></i>
+                </a>
+                <a href="">
+                    <i class="bi bi-bag fs-3 text-dark"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row g-0"> <!-- g-0 = no gutter -->
+            <div class="col-1/ position-relative">
+                <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_1920,w_1920/global_womens_euro_feds_away_football_ss25_launch_spain_plp_Banner_Statement_d_7f9b1bbfb2.jpg"
+                    class="img-fluid w-80 h-120" alt="barca">
+                <p class="h3 px-3 bg-dark text-uppercase position-absolute bottom-0 start-0 m-2 text-white">clubshirt
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid ">
+
+        <p class="h5 text-start fw-3 fs-5 mt-5 text-uppercase">spain 25/26</p>
+
+        <div class="row my-2">
+            <div class="col px-3 mx-3">
+                <a href="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/eb20923633b7495cab7e7c2a456de4d2_9366/Spain_24_IP9331_21_model.jpg"
+                    class="nav-link">
+                    <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/eb20923633b7495cab7e7c2a456de4d2_9366/Spain_24_IP9331_21_model.jpg"
+                        class="img-fluid" style="width:100%; height:350px; object-fit:cover;" alt="man united third">
+                    <p class="h5 fs-5 mx-4 my-2">฿2,900</p>
+                </a>
+            </div>
+            <div class="col px-3 mx-3">
+                <a href="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/d42f520be50444858f01d8fa75dfd29a_9366/Spain_24_IS9033_21_model.jpg"
+                    class="nav-link">
+                    <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/d42f520be50444858f01d8fa75dfd29a_9366/Spain_24_IS9033_21_model.jpg"
+                        class="img-fluid" style="width:100%; height:350px; object-fit:cover;" alt="man united third">
+                    <p class="h5 fs-5 mx-4 my-2">฿2,800</p>
+                </a>
+            </div>
+            <div class="col px-3 mx-3">
+                <a href="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/de062172e2f040638bada4dfbfcfc8d9_9366/Spain_25_JF2648_21_model.jpg"
+                    class="nav-link">
+                    <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/de062172e2f040638bada4dfbfcfc8d9_9366/Spain_25_JF2648_21_model.jpg"
+                        class="img-fluid" style="width:100%; height:350px; object-fit:cover;" alt="man united third">
+                    <p class="h5 fs-5 mx-4 my-2">฿2,800</p>
+                </a>
+            </div>
+            <div class="col px-3 mx-3">
+                <a href="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/3b256e1540e744608548d02ddd2e3a3b_9366/Spain_25_JF2650_21_model.jpg"
+                    class="nav-link">
+                    <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/3b256e1540e744608548d02ddd2e3a3b_9366/Spain_25_JF2650_21_model.jpg"
+                        class="img-fluid" style="width:100%; height:350px; object-fit:cover;" alt="man united third">
+                    <p class="h5 fs-5 mx-4 my-2">฿2,400</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row g-0 my-5"> <!-- g-0 = no gutter -->
+            <div class="col-12 position-relative">
+                <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_1920,w_1920/global_womens_euro_feds_away_football_ss25_launch_germany_plp_Banner_Statement_d_aabcf66950.jpg"
+                    class="img-fluid w-80 h-120" alt="barca">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+
+        <p class="h5 text-start fw-3 fs-5 mt-5 text-uppercase">germany 25/26</p>
+
+        <div class="row my-2">
+            <div class="col px-3 mx-3">
+                <a href="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/08a3d03008934eba9f4377c2e7a009df_9366/Germany_24_IP8139_21_model.jpg"
+                    class="nav-link">
+                    <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/08a3d03008934eba9f4377c2e7a009df_9366/Germany_24_IP8139_21_model.jpg"
+                        class="img-fluid" style="width:100%; height:350px; object-fit:cover;" alt="man united third">
+                    <p class="h5 fs-5 mx-4 my-2">฿2,900</p>
+                </a>
+            </div>
+            <div class="col px-3 mx-3">
+                <a href="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/bb0a117b85324153aa9ea829d93ac704_9366/Germany_24_IP8158_21_model.jpg"
+                    class="nav-link">
+                    <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/bb0a117b85324153aa9ea829d93ac704_9366/Germany_24_IP8158_21_model.jpg"
+                        class="img-fluid" style="width:100%; height:350px; object-fit:cover;" alt="man united third">
+                    <p class="h5 fs-5 mx-4 my-2">฿2,900</p>
+                </a>
+            </div>
+            <div class="col px-3 mx-3">
+                <a href="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/30728131d21e43b0a46132fec8fc9e6c_9366/Tiro_24_Competition_IP8245_21_model.jpg"
+                    class="nav-link">
+                    <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/30728131d21e43b0a46132fec8fc9e6c_9366/Tiro_24_Competition_IP8245_21_model.jpg"
+                        class="img-fluid" style="width:100%; height:350px; object-fit:cover;" alt="man united third">
+                    <p class="h5 fs-5 mx-4 my-2">฿2,400</p>
+                </a>
+            </div>
+            <div class="col px-3 mx-3">
+                <a href="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/89ad376a2618429d846ed2a354a30f99_9366/Germany_25_JF2605_21_model.jpg"
+                    class="nav-link">
+                    <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/89ad376a2618429d846ed2a354a30f99_9366/Germany_25_JF2605_21_model.jpg"
+                        class="img-fluid" style="width:100%; height:350px; object-fit:cover;" alt="man united third">
+                    <p class="h5 fs-5 mx-4 my-2">฿2,600</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</html>
