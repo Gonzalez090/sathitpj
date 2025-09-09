@@ -38,13 +38,13 @@
     <nav class="navbar navbar-expand-lg bg-light py-3 border-bottom bordor-dark">
         <div class="container-fluid">
 
-            <a href="Home.html" class="navbar-brand fs-2 fw-bolder text-uppercase mx-3">JS</a>
+            <a href="Home.php" class="navbar-brand fs-2 fw-bolder text-uppercase mx-3">JS</a>
 
             <ul class="navbar-nav px-1">
-                <li class="navbar-item"><a href="Club.html"
+                <li class="navbar-item"><a href="Club.php"
                         class="nav-link fs-5 fw-bolder text-uppercase mx-3">ClubShirt</a>
                 </li>
-                <li class="navbar-item"><a href="National.html"
+                <li class="navbar-item"><a href="National.php"
                         class="nav-link fs-5 fw-bolder text-uppercase">Nationalteamshirt</a>
                 </li>
             </ul>
@@ -58,7 +58,7 @@
             </div>
 
             <div class="d-flex align-items-center">
-                <a href="" class="me-2">
+                <a href="account.php" class="me-2">
                     <i class="bi bi-person-fill fs-3 text-dark"></i>
                 </a>
                 <a href="">
