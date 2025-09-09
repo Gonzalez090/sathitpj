@@ -6,71 +6,95 @@ $error_message = "";
 
 // ตรวจสอบว่ามีการส่งฟอร์มหรือไม่
 if (isset($_POST['submit'])) {
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $password = mysqli_real_escape_string($conn, $_POST['password']);
+  $email = mysqli_real_escape_string($conn, $_POST['email']);
+  $password = mysqli_real_escape_string($conn, $_POST['password']);
 
-    // ดึงข้อมูลจากตาราง account
-    $sql = "SELECT * FROM account WHERE email = '$email' LIMIT 1";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_assoc($result);
+  // ดึงข้อมูลจากตาราง account
+  $sql = "SELECT * FROM account WHERE email = '$email' LIMIT 1";
+  $result = mysqli_query($conn, $sql);
+  $row = mysqli_fetch_assoc($result);
 
-    if ($row) {
-        // เทียบ password ตรงๆ (ถ้า hash ไว้ควรใช้ password_verify)
-        if ($password === $row['password']) {
-            // เก็บค่าไว้ใน session
-            $_SESSION['id'] = $row['account_id'];
-            $_SESSION['username'] = $row['username'];
-            $_SESSION['email'] = $row['email'];
+  if ($row) {
+    // เทียบ password ตรงๆ (ถ้า hash ไว้ควรใช้ password_verify)
+    if ($password === $row['password']) {
+      // เก็บค่าไว้ใน session
+      $_SESSION['id'] = $row['account_id'];
+      $_SESSION['username'] = $row['username'];
+      $_SESSION['email'] = $row['email'];
 
-            // ไปหน้า home.php
-            header("Location: home.php");
-            exit;
-        } else {
-            $error_message = "❌ รหัสผ่านไม่ถูกต้อง";
-        }
+      // ไปหน้า home.php
+      header("Location: home.php");
+      exit;
     } else {
-        $error_message = "❌ ไม่พบบัญชีอีเมลนี้";
+      $error_message = "❌ รหัสผ่านไม่ถูกต้อง";
     }
+  } else {
+    $error_message = "❌ ไม่พบบัญชีอีเมลนี้";
+  }
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login | JS Store</title>
+  <title>Login | JS Club</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background: #fff;
+      font-family: Arial, sans-serif;
+    }
+  </style>
 </head>
-<body class="bg-light">
 
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-4">
-      <div class="card mt-5 shadow">
-        <div class="card-body">
-          <h4 class="card-title text-center mb-4">เข้าสู่ระบบ</h4>
+<body>
 
-          <?php if (!empty($error_message)): ?>
-            <div class="alert alert-danger"><?php echo $error_message; ?></div>
-          <?php endif; ?>
+  <!-- Logo -->
+  <nav class="navbar navbar-expand-lg bg-light py-3 border-bottom bordor-dark ">
+    <div class="container-fluid d-flex justify-content-center">
 
-          <form method="POST" action="">
-            <div class="mb-3">
-              <label class="form-label">อีเมล</label>
-              <input type="email" class="form-control" name="email" required>
-            </div>
-            <div class="mb-3">
-              <label class="form-label">รหัสผ่าน</label>
-              <input type="password" class="form-control" name="password" required>
-            </div>
-            <button type="submit" name="submit" class="btn btn-dark w-100">เข้าสู่ระบบ</button>
-          </form>
+      <a href="Home.php" class="navbar-brand fs-2 fw-bolder text-uppercase mx-3 ">JS</a>
+
+
+    </div>
+  </nav>
+
+  <!-- Login/Register Form -->
+  <div class="container">
+    <div class="row justify-content-center my-5">
+      <div class="col-md-5">
+        <?php if (!empty($error_message)): ?>
+          <div class="alert alert-danger"><?php echo $error_message; ?></div>
+        <?php endif; ?>
+
+        <form method="POST" action="">
+          <div class="mb-3">
+            <input type="username" class="form-control" name="username" placeholder="username" required>
+          </div>
+          <div class="mb-3">
+            <input type="password" class="form-control" name="password" placeholder="password" required>
+          </div>
+          <button type="submit" name="submit" class="btn btn-outline-dark w-100 btn-custom my-1">เข้าสู่ระบบ</button>
+          <a href="register.php" class="btn btn-dark w-100 btn-custom">สมัครสมาชิก</a>
+        </form>
+
+        <div class="text-center mt-3">หรือ</div>
+
+        <!-- Social Icons -->
+        <div class="d-flex justify-content-center align-items-center mt-3  gap-5">
+          <a href="#"><i class="bi bi-facebook text-primary fs-1"></i></a>
+          <a href="#"><i class="bi bi-google text-danger fs-1"></i></a>
+          <a href="#"><i class="bi bi-envelope text-warning fs-1"></i></a>
         </div>
+
       </div>
     </div>
   </div>
-</div>
 
 </body>
+
 </html>
