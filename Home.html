@@ -9,13 +9,29 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
 
-  <style>
-    body {
-      font-family: 'Roboto Slab', serif;
-    }
-  </style>
+    <style>
+        body {
+            font-family: 'Roboto Slab', serif;
+        }
+
+        /* เพิ่มกรอบเมื่อเอาเมาส์ชี้ */
+        .hover-border {
+            display: block;
+            border: 1px solid transparent;
+            transition: border-color .2s, box-shadow .2s;
+        }
+
+        .hover-border:hover {
+            border-color: #212529;
+            /* สีกรอบ = text-dark ของ Bootstrap */
+            box-shadow: 0 0 0 .25rem rgba(33, 37, 41, .15);
+            /* วงเงาอ่อนๆ */
+        }
+    </style>
+
 </head>
 
 <body>
@@ -75,35 +91,36 @@
 
         <div class="row my-2">
             <div class="col px-3 mx-3">
-                <a
-                    href="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/c5036ba11ce9417386319c5a26b5dc15_9366/Manchester_United_25-26_JI7429_HM1.jpg" class="nav-link">
+                <a href="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/c5036ba11ce9417386319c5a26b5dc15_9366/Manchester_United_25-26_JI7429_HM1.jpg"
+                    class="nav-link hover-border text-decoration-none text-dark p-2">
                     <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/c5036ba11ce9417386319c5a26b5dc15_9366/Manchester_United_25-26_JI7429_HM1.jpg"
                         class="img-fluid" style="width:100%; height:350px; object-fit:cover;" alt="man united third">
-                        <p class="h5 fs-5 mx-4 my-2">฿2,700</p>
+                    <p class="h5 fs-5 mx-4 my-2 mb-3">฿2,700</p>
                 </a>
+
             </div>
             <div class="col px-3 mx-3">
-                <a
-                    href="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/8dd91b60f83f43179dda41bacebd7968_9366/Manchester_United_25-26_KD4225_21_model.jpg" class="nav-link">
+                <a href="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/8dd91b60f83f43179dda41bacebd7968_9366/Manchester_United_25-26_KD4225_21_model.jpg"
+                    class="nav-link hover-border text-decoration-none text-dark p-2">
                     <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/8dd91b60f83f43179dda41bacebd7968_9366/Manchester_United_25-26_KD4225_21_model.jpg"
                         class="img-fluid" style="width:100%; height:350px; object-fit:cover;" alt="man united third">
-                        <p class="h5 fs-5 mx-4 my-2">฿2,900</p>
+                    <p class="h5 fs-5 mx-4 my-2">฿2,900</p>
                 </a>
             </div>
             <div class="col px-3 mx-3">
-                <a
-                    href="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/1623df85821444868c899b09fd5c9a3c_9366/Manchester_United_25-26_JI7423_21_model.jpg" class="nav-link">
+                <a href="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/1623df85821444868c899b09fd5c9a3c_9366/Manchester_United_25-26_JI7423_21_model.jpg"
+                    class="nav-link hover-border text-decoration-none text-dark p-2">
                     <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/1623df85821444868c899b09fd5c9a3c_9366/Manchester_United_25-26_JI7423_21_model.jpg"
                         class="img-fluid" style="width:100%; height:350px; object-fit:cover;" alt="man united third">
-                        <p class="h5 fs-5 mx-4 my-2">฿2,700</p>
+                    <p class="h5 fs-5 mx-4 my-2">฿2,700</p>
                 </a>
             </div>
             <div class="col px-3 mx-3">
-                <a
-                    href="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/f0df5ad5b42b41a3a725451c97ee48ce_9366/Manchester_United_25-26_KD4227_20_01_model.jpg" class="nav-link">
+                <a href="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/f0df5ad5b42b41a3a725451c97ee48ce_9366/Manchester_United_25-26_KD4227_20_01_model.jpg"
+                    class="nav-link hover-border text-decoration-none text-dark p-2">
                     <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/f0df5ad5b42b41a3a725451c97ee48ce_9366/Manchester_United_25-26_KD4227_20_01_model.jpg"
                         class="img-fluid" style="width:100%; height:350px; object-fit:cover;" alt="man united third">
-                        <p class="h5 fs-5 mx-4 my-2">฿2,400</p>
+                    <p class="h5 fs-5 mx-4 my-2">฿2,400</p>
                 </a>
             </div>
         </div>
@@ -125,7 +142,7 @@
         <div class="row my-2">
             <div class="col px-3 mx-3">
                 <a href="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/eb20923633b7495cab7e7c2a456de4d2_9366/Spain_24_IP9331_21_model.jpg"
-                    class="nav-link">
+                    class="nav-link hover-border text-decoration-none text-dark p-2">
                     <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/eb20923633b7495cab7e7c2a456de4d2_9366/Spain_24_IP9331_21_model.jpg"
                         class="img-fluid" style="width:100%; height:350px; object-fit:cover;" alt="man united third">
                     <p class="h5 fs-5 mx-4 my-2">฿2,900</p>
@@ -133,7 +150,7 @@
             </div>
             <div class="col px-3 mx-3">
                 <a href="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/d42f520be50444858f01d8fa75dfd29a_9366/Spain_24_IS9033_21_model.jpg"
-                    class="nav-link">
+                    class="nav-link hover-border text-decoration-none text-dark p-2">
                     <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/d42f520be50444858f01d8fa75dfd29a_9366/Spain_24_IS9033_21_model.jpg"
                         class="img-fluid" style="width:100%; height:350px; object-fit:cover;" alt="man united third">
                     <p class="h5 fs-5 mx-4 my-2">฿2,800</p>
@@ -141,7 +158,7 @@
             </div>
             <div class="col px-3 mx-3">
                 <a href="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/de062172e2f040638bada4dfbfcfc8d9_9366/Spain_25_JF2648_21_model.jpg"
-                    class="nav-link">
+                    class="nav-link hover-border text-decoration-none text-dark p-2">
                     <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/de062172e2f040638bada4dfbfcfc8d9_9366/Spain_25_JF2648_21_model.jpg"
                         class="img-fluid" style="width:100%; height:350px; object-fit:cover;" alt="man united third">
                     <p class="h5 fs-5 mx-4 my-2">฿2,800</p>
@@ -149,7 +166,7 @@
             </div>
             <div class="col px-3 mx-3">
                 <a href="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/3b256e1540e744608548d02ddd2e3a3b_9366/Spain_25_JF2650_21_model.jpg"
-                    class="nav-link">
+                    class="nav-link hover-border text-decoration-none text-dark p-2">
                     <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/3b256e1540e744608548d02ddd2e3a3b_9366/Spain_25_JF2650_21_model.jpg"
                         class="img-fluid" style="width:100%; height:350px; object-fit:cover;" alt="man united third">
                     <p class="h5 fs-5 mx-4 my-2">฿2,400</p>
